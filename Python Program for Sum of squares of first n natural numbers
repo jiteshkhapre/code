@@ -3,7 +3,7 @@ def squaresofn(n):
         print("Invalid natural number.")
     else:
         s = n*(n+1)*(2*n + 1)/6
-    return s
+        return s
 n = int(input("Enter number: "))
 print("Sum of first {0} natural numbers is {1}.".format(n,squaresofn(n)))
 
@@ -15,6 +15,6 @@ def squaresofn(n):
         s = 0
         for i in range(1,n+1):
             s = s + i*i
-    return s
+            return s
 n = int(input("Enter number: "))
 print("Sum of first {0} natural numbers is {1}.".format(n,squaresofn(n)))

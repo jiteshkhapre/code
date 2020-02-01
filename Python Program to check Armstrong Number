@@ -11,16 +11,15 @@ def power(n,e):
         return 1
     else:
         for i in range(1,e+1):
-            res = res * e
+            res = res * n
     return res
     
 def isams(n):
     num=n
     s=0
-    o = order(num)
+    o = order(n)
     while(num!=0):
         r=num%10
-        print(num)
         s = s + power(r,o)
         num=num//10
     if s == n:
@@ -31,7 +30,7 @@ def isams(n):
 
 n = int(input("Enter a number: "))
 res = isams(n)
-if isams == True:
+if res == True:
     print("This is an Amstrong number.")
 else:
     print("This is not an Amstrong number.")

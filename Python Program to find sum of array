@@ -1,0 +1,17 @@
+def sumoflist():
+    lst=[]
+    n = input("Enter elements of list: ")
+    lst.append(n)
+    while(n!='q' or n!='Q'):
+        n = input("Enter elements of list: ")
+        if n == 'q' or n == 'Q':
+            break
+        lst.append(n)
+    print("Entered list is: ", lst)
+    sum_ = 0
+    for i in lst:
+        sum_ = sum_ + float(i)
+    print("Sum: ", sum_)
+    
+print("Press q or Q to finish entering")
+sumoflist()

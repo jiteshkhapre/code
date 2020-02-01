@@ -1,0 +1,5 @@
+p = input("Enter Principal: ")
+r = input("Enter Rate: ")
+t = input("Enter Time: ")
+si = float(p)*float(r)*float(t)/100
+print("Simple Interest of principle {0}, rate {1} and time {2} is {3}".format(p,r,t,si))

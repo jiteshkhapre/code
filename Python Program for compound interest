@@ -1,0 +1,5 @@
+p = input("Enter Principal: ")
+r = input("Enter Rate: ")
+t = input("Enter Time: ")
+ci = float(p)*(1+(float(r)/100))**float(t)
+print("Compound Interest of principle {0}, rate {1} and time {2} is {3}".format(p,r,t,ci))

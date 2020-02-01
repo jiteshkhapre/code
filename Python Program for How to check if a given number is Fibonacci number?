@@ -1,6 +1,6 @@
 import math
 def issquare(n):
-    res=math.sqrt(n)
+    res=int(math.sqrt(n))
     return res*res == n
 def isfibonacci(n):
     if n<0:

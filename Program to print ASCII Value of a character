@@ -1,0 +1,2 @@
+string = str(input("Enter character: "))
+print("ASCII value of %s is %d" %(string,ord(string)))

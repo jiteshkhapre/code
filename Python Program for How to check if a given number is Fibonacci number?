@@ -1,0 +1,15 @@
+import math
+def issquare(n):
+    res=math.sqrt(n)
+    return res*res == n
+def isfibonacci(n):
+    if n<0:
+        print("Invalid Fibonacci number.")
+    else:
+        if issquare((5*n*n)+4) == True or issquare((5*n*n)-4) == True:
+            print("This is a fibonacci number.")
+        else:
+            print("This is not a fionacci number.")
+            
+n = int(input("Enter number: "))
+res=isfibonacci(n)

@@ -1,0 +1,10 @@
+def max_in_array(arr):
+    n=len(arr)
+    m = 0
+    for i in arr:
+        if m < i:
+            m = i
+    return m
+arr = [10,20,4,4646,5346,564]
+max_element = max_in_array(arr)
+print("Maximum element in array is:",  max_element)

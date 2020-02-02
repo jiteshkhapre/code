@@ -1,0 +1,29 @@
+def ismonotone(arr):
+    count = 0
+    temp = arr[0]
+    if arr[0] < arr[-1]:
+        for i in arr:
+            if temp <= i:
+                temp = i
+                count += 1
+            else:
+                print("Not monotone")
+                break
+        if count == len(arr):
+            print("Is monotone")
+    else:
+        for i in arr:
+            if temp >= i:
+                temp = i
+                count += 1
+            else:
+                print("Not monotone")
+                break
+        if count == len(arr):
+            print("Is monotone")
+        else:
+            print("Not monotone")
+        
+arr = [6,5,4,4,3]
+print("Initial array: ", arr)
+ismonotone(arr)

@@ -1,0 +1,10 @@
+def remainderofmul(arr,n):
+    mul = 1
+    for i in arr:
+        mul = mul * i
+    return mul % n
+
+arr = [100, 10, 5, 25, 35, 14]
+print("Initial array: ", arr)
+remainder = remainderofmul(arr,11)
+print("The remainder is:",remainder)

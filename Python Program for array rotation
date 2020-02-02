@@ -14,3 +14,23 @@ def rotonce(arr):
 
 arr = [10,20,4,4646,5346,564]
 rot(arr,2)
+
+---------------------------OR----------------------------
+
+def reversearray(arr, start, end):
+    while(start<end):
+        temp = arr[start]
+        arr[start] = arr[end]
+        arr[end] = temp
+        start += 1
+        end -= 1
+def rot(arr, d):
+    n = len(arr)
+    reversearray(arr, 0, d-1)
+    reversearray(arr, d, n-1)
+    reversearray(arr, 0, n-1)
+    
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+rot(arr,3)
+print("Final array after rotation: ", arr)

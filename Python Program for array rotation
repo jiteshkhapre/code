@@ -34,3 +34,24 @@ arr = [10,20,4,4646,5346,564]
 print("Initial array: ", arr)
 rot(arr,3)
 print("Final array after rotation: ", arr)
+
+------------------------- OR --------------------------
+def pop_element(arr):
+    ele = arr[0]
+    arr.remove(ele)
+    
+def split_array(arr, k):
+    n = len(arr)
+    temp = []
+    for i in range(0,k):
+        ele = arr[i]
+        temp.append(ele)
+    for j in range(0,k):
+        pop_element(arr)
+        
+    arr.extend(temp)
+
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+split_array(arr,3)
+print("Final array after rotation: ", arr)

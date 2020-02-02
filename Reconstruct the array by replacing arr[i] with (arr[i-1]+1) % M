@@ -1,0 +1,13 @@
+def reconstruct(arr,M):
+    remainder = 0
+    n = len(arr)
+    prev = arr[0]
+    for i in range(1,n-1):
+        remainder = (prev + 1) % M
+        arr[i] = remainder
+        prev = arr[i]
+        
+arr = [5, -1, -1, 1, 2, 3]
+print("Initial array: ", arr)
+reconstruct(arr, 7)
+print(arr)

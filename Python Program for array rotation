@@ -1,0 +1,16 @@
+def rot(arr, d):
+    for i in range(d):        
+        rotonce(arr)
+    
+    print("New rotated array is", arr)
+
+    
+def rotonce(arr):
+    n = len(arr)
+    temp = arr[0]
+    for i in range(n-1):
+        arr[i] = arr[i+1]
+    arr[n-1] = temp
+
+arr = [10,20,4,4646,5346,564]
+rot(arr,2)

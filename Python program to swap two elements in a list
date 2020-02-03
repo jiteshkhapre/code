@@ -1,0 +1,44 @@
+def swap_two(arr,l1,l2):
+    arr[l1], arr[l2] = arr[l2],arr[l1]
+    return arr
+
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+arr_new = swap_two(arr,2,5)
+print("Swapped array: ", arr_new)
+
+----------------- OR -------------------
+def swap_two(arr,l1,l2):
+    second = arr.pop(l2)
+    first = arr.pop(l1)
+    arr.insert(l1,second)
+    arr.insert(l2,first)
+    return arr
+
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+arr_new = swap_two(arr,2,5)
+print("Swapped array: ", arr_new)
+
+---------------- OR ------------------
+def swap_two(arr,l1,l2):
+    temp = arr[l1]
+    arr[l1] = arr[l2]
+    arr[l2] = temp
+    return arr
+
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+arr_new = swap_two(arr,2,5)
+print("Swapped array: ", arr_new)
+
+-------------------- OR ----------------------
+def swap_two(arr,l1,l2):
+    get = arr[l1], arr[l2]
+    arr[l2], arr[l1] = get
+    return arr
+
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+arr_new = swap_two(arr,2,5)
+print("Swapped array: ", arr_new)

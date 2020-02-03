@@ -1,0 +1,54 @@
+def swap_first_last(arr):
+    temp = arr[0]
+    arr[0] = arr[-1]
+    arr[-1] = temp
+    
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+swap_first_last(arr)
+print("Swapped array: ", arr)
+
+--------------------- OR -------------------------
+def swap_first_last(arr):
+    arr[0],arr[-1] = arr[-1],arr[0]
+    
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+swap_first_last(arr)
+print("Swapped array: ", arr)
+
+---------------------- OR ----------------------
+
+def swap_first_last(arr):
+    get = arr[0], arr[-1]
+    arr[-1],arr[0] = get
+    
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+swap_first_last(arr)
+print("Swapped array: ", arr) 
+
+----------------------- OR -----------------------
+
+def swap_first_last(arr):
+    first, *middle, last = arr
+    arr = [last, *middle, first]
+    return arr
+    
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+arr_new = swap_first_last(arr)
+print("Swapped array: ", arr_new)
+
+----------------------- OR -----------------------
+
+def swap_first_last(arr):
+    first=arr.pop(0)
+    last = arr.pop(-1)
+    arr.insert(0,last)
+    arr.append(first)
+    return arr
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+arr_new = swap_first_last(arr)
+print("Swapped array: ", arr_new)

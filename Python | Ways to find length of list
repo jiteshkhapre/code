@@ -1,0 +1,26 @@
+from operator import length_hint
+import time
+
+arr = [1,4,5,7,8,9,646466,68787899879,876994646674,76864687648,5874588768,8464646584646946,64646468466,646349,9768978,6876764,4699764,5748946,3464686,39697555,54684646,354466,6584655,687684]
+start_time_loop = time.time()
+time.sleep(1)
+count = 0
+for i in arr:
+    count += 1
+time_diff_loop = (time.time() - start_time_loop)*1000
+print("Length from loop: ", count)
+print("Total time taken: ", time_diff_loop)
+
+start_time_len = time.time()
+time.sleep(1)
+n=len(arr)
+time_diff_len = (time.time() - start_time_len)*1000
+print("Length from len function: ", n)
+print("Total time taken: ", time_diff_len)
+
+start_time_len_hint = time.time()
+time.sleep(1)
+n_len=length_hint(arr)
+time_diff_length = (time.time() - start_time_len_hint)*1000
+print("Length from length_hint function: ", n_len)
+print("Total time taken: ", time_diff_length)

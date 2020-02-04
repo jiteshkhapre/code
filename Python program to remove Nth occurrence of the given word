@@ -1,0 +1,15 @@
+def removeNword(arr, word, occurence):
+    count = 0
+    n = len(arr)
+    for i in range(0,n):
+        if arr[i] == word:
+            count += 1
+            if count == occurence:
+                arr.pop(i)
+                break
+    return arr
+
+arr = ["can", "you",  "can", "a", "can" , "?"]
+print("Initial array: ", arr)
+arr_new = removeNword(arr, 'can',3)
+print("Array after removed word: ", arr_new)

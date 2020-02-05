@@ -1,0 +1,36 @@
+start = int(input("Enter start limit: "))
+end = int(input("Enter end limit: "))
+even_count = 0
+odd_count = 0
+for i in range(start, end+1):
+    if i%2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+print("Between {0} and {1} the even nos are {2} and odd nos are {3}".format(start, end, even_count, odd_count))
+------------------------------------------------------- OR ------------------------------------------------------
+start = int(input("Enter start limit: "))
+end = int(input("Enter end limit: "))
+even_count = 0
+odd_count = 0
+while(start<=end):
+    if start%2 == 0:
+        even_count += 1
+    else:
+        odd_count += 1
+    start += 1
+print("Between {0} and {1} the even nos are {2} and odd nos are {3}".format(start, end, even_count, odd_count))
+-------------------------------------------------------- OR ----------------------------------------------------
+start = int(input("Enter start limit: "))
+end = int(input("Enter end limit: "))
+even_count = len([i for i in range(start, end+1) if i%2 == 0])
+odd_count = end-start+1-even_count
+print("Between {0} and {1} the even nos are {2} and odd nos are {3}".format(start, end, even_count, odd_count))
+--------------------------------------------------------- OR ---------------------------------------------------
+import numpy as np
+start = int(input("Enter start limit: "))
+end = int(input("Enter end limit: "))
+arr = np.arange(start,end+1)
+odd_count = len(list(filter(lambda x: x%2,arr)))
+even_count = len(arr)-odd_count
+print("Between {0} and {1} the even nos are {2} and odd nos are {3}".format(start, end, even_count, odd_count))

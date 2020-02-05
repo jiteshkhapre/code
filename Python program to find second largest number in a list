@@ -1,0 +1,16 @@
+arr = [21, 15, 6, 25, 25, 7, 10, 12, 20, 10, 10, 28, 28,10]
+print("Initial array: ", arr)
+arr.sort()
+arr_new = set(arr)
+arr_new.remove(max(arr_new))
+print("Second largest element is: ", max(arr_new))
+-------------------------- OR ------------------------------
+arr = [21, 15, 6, 25, 25, 7, 10, 12, 20, 10, 10, 28, 28,10]
+print("Initial array: ", arr)
+ele_max = arr[0]
+for i in arr:
+    if i > ele_max:
+        second_max = ele_max
+        ele_max = i
+        
+print("Second largest element is: ", second_max)

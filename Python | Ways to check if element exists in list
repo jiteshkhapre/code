@@ -1,0 +1,8 @@
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+set_arr = set(arr)
+
+if 4 in set_arr:
+    print("Element eists")
+else:
+    print("Element does not exist")

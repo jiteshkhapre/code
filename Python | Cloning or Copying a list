@@ -1,0 +1,32 @@
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+copy_lst = [i for i in arr]
+print("Copied array: ", copy_lst)
+--------------- OR ----------------
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+copy_lst = []
+for i in arr:
+    copy_lst.append(i)
+print("Copied array: ", copy_lst)
+--------------- OR -----------------
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+copy_lst = list(arr)
+print("Copied array: ", copy_lst)
+---------------- OR ----------------
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+new_lst = []
+new_lst.extend(arr)
+print("Copied array: ", new_lst)
+----------------- OR ----------------
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+copy_lst = arr.copy()
+print("Copied array: ", copy_lst)
+------------------ OR ---------------------
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+copy_lst = arr[:]
+print("Copied array: ", copy_lst)

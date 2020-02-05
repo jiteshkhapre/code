@@ -1,0 +1,32 @@
+def n_rev(arr, n):
+    arr.sort()
+    arr.reverse()
+    lst=[]
+    for i in range(0,n):
+        lst.append(arr[i])
+    return lst
+
+arr = [21, 15, 6, 25, 25, 7, 10, 12, 20, 10, 10, 28, 28,10]
+print("Initial array: ", arr)
+res = n_rev(arr, 5)
+print("Final array: ", res)
+--------------------------- OR ----------------------------------
+def n_rev(arr, n):
+    arr.sort()
+    arr.reverse()
+    lst=[]
+    count = 0
+    for i in arr:
+        if i in lst:
+            continue
+        else:
+            lst.append(i)
+            count += 1
+            if count == n:
+                break
+    return lst
+
+arr = [21, 15, 6, 25, 25, 7, 10, 12, 20, 10, 10, 28, 28,10]
+print("Initial array: ", arr)
+res = n_rev(arr, 5)
+print("Final array: ", res)

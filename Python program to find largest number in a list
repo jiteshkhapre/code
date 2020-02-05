@@ -1,0 +1,19 @@
+arr = np.array([15, 6, 7, 10, 12, 20, 10, 28,10])
+print("Initial array: ", arr)
+ele = arr[0]
+
+for i in arr:
+    if ele < i:
+        ele = i
+    
+print("Largest element is: ", ele)
+----------------------- OR -------------------------
+arr = np.array([15, 6, 7, 10, 12, 20, 10, 28,10])
+print("Initial array: ", arr)
+ele = arr.max()
+print("Largest element is: ", ele)
+------------------------- OR ---------------------
+arr = np.array([15, 6, 7, 10, 12, 20, 10, 28,10])
+print("Initial array: ", arr)
+arr.sort()
+print("Largest element is: ", arr[-1])

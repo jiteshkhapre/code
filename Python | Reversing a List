@@ -1,0 +1,20 @@
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+arr_new = arr[::-1]
+print("Reversed list is: ", arr_new)
+
+----------------- OR ---------------------
+
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+arr.reverse()
+print("Reversed list is: ", arr)
+
+------------------- OR ------------------
+
+def reversed_list(arr):
+    return [ele for ele in reversed(arr)]
+arr = [10,20,4,4646,5346,564]
+print("Initial array: ", arr)
+rev_list = reversed_list(arr)
+print("Reversed list is: ", rev_list)

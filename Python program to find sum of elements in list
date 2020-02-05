@@ -1,0 +1,27 @@
+def sum_all(arr, size):
+    if (size == 0):
+        return 0
+    else:
+        return arr[size -1] + sum_all(arr, size-1)
+ 
+arr = [15, 6, 7, 10, 12, 20, 10, 28, 10]
+print("Initial array: ", arr)
+size = len(arr)
+total = sum_all(arr,size)
+print("Final summ of all elements is: ", total)
+----------------------- OR ------------------------
+arr = [15, 6, 7, 10, 12, 20, 10, 28, 10]
+print("Initial array: ", arr)
+total = sum(arr)
+print("Final summ of all elements is: ", total)
+------------------------ OR------------------------
+def sum_all(arr):
+    total = 0
+    for i in arr:
+        total = total + i
+    return total
+
+arr = [15, 6, 7, 10, 12, 20, 10, 28, 10]
+print("Initial array: ", arr)
+total = sum_all(arr)
+print("Final summ of all elements is: ", total)

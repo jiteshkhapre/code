@@ -1,0 +1,33 @@
+def neg_nos(arr):
+    lst = []
+    for i in arr:
+        if i < 0:
+            lst.append(i)
+    return lst
+arr = [21, -15, 6, 25, -25, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+res = pos_nos(arr)
+print("All negative numbers of list are: ", res)
+------------------------------- OR ------------------------------
+def neg_nos(arr):
+    lst = []
+    i=0
+    while(i<len(arr)):
+        if arr[i] < 0:
+            lst.append(arr[i])
+        i += 1
+    return lst
+arr = [21, -15, 6, 25, -25, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+res = pos_nos(arr)
+print("All negative numbers of list are: ", res)
+------------------------------ OR ----------------------------------
+arr = [21, -15, 6, 25, -25, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+res = [i for i in arr if i<0]
+print("All negative numbers of list are: ", res)
+------------------------------- OR ---------------------------------
+arr = [21, -15, 6, 25, -25, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+res = list(filter(lambda x: x<0, arr))
+print("All negative numbers of list are: ", res)

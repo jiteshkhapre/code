@@ -1,0 +1,21 @@
+import numpy as np
+arr =np.array([15, 6, 7, 10, 12, 20, 10, 28,10])
+print("Initial array: ", arr)
+total = np.prod(arr, dtype = np.double)
+print("Final product of all elements is: ", total)
+----------------------- OR --------------------------
+def mul_all(arr):
+    total = 1
+    for i in arr:
+        total = total * i
+    return total
+arr = [15, 6, 7, 10, 12, 20, 10, 28, 10]
+print("Initial array: ", arr)
+total = mul_all(arr)
+print("Final product of all elements is: ", total)
+------------------------ OR --------------------------
+from functools import reduce
+arr =([15, 6, 7, 10, 12, 20, 10, 28,10])
+print("Initial array: ", arr)
+total = reduce((lambda x, y : x * y), arr)
+print("Final product of all elements is: ", total)

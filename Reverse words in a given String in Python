@@ -1,0 +1,8 @@
+def rev(s):
+    rev = s.split(" ")
+    rev = rev[::-1]
+    out = ' '.join(rev)
+    return out
+s = 'geeks quiz practice code'
+out = rev(s)
+print(out)

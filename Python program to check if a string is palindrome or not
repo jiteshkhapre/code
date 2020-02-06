@@ -1,0 +1,58 @@
+def reverse(s):
+    s=s[::-1]
+    return s
+def ispalindrome(s):
+    if s == reverse(s):
+        return True
+    else:
+        return False
+
+s=str(input("Enter the string/word: "))
+res = ispalindrome(s)
+if res == True:
+      print("This is a Palindrome.")
+else:
+      print("This is not a Palindrome.")
+-------------------------- OR -----------------------
+def ispalindrome(s):
+    for i in range(0, len(s)//2):
+        if s[i] != s[len(s)-i-1]:
+            return False
+    return True
+
+s = str(input("Enter the string/word: "))
+res = ispalindrome(s)
+if res == True:
+      print("{0} is a Palindrome.".format(s))
+else:
+      print("{0} is not a Palindrome.".format(s))
+---------------------------- OR -------------------------
+def ispalindrome(s):
+    rev = ''.join(reversed(s))
+    if s != rev:
+        return False
+    else:
+        return True
+
+s = str(input("Enter the string/word: "))
+res = ispalindrome(s)
+if res == True:
+      print("{0} is a Palindrome.".format(s))
+else:
+      print("{0} is not a Palindrome.".format(s))
+------------------------------ OR ----------------------
+def ispalindrome(s):
+    rev = ''
+    for i in s:
+        rev = i + rev
+    if s != rev:
+        return False
+    else:
+        return True
+
+s = str(input("Enter the string/word: "))
+res = ispalindrome(s)
+if res == True:
+      print("{0} is a Palindrome.".format(s))
+else:
+      print("{0} is not a Palindrome.".format(s))

@@ -1,0 +1,12 @@
+def zipping(arr1, arr2):
+    zipping = list(zip(arr1, arr2))
+    zipping.sort()
+    lst = []
+    for i in zipping:
+        lst.append(i[1])
+    return lst
+
+arr1 = ["g", "e", "e", "k", "s", "f", "o", "r", "g", "e", "e", "k", "s"]
+arr2 = [ 0,   1,   1,    0,   1,   2,   2,   0,   1]
+final = zipping(arr2, arr1)
+print("Finally arranged array 1 on basis of array 2 after Zipping array pairs: ", final)

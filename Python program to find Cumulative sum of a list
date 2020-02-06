@@ -1,0 +1,12 @@
+def sum_cum(arr):
+    total = 0
+    new = []
+    for i in arr:
+        total = total + i
+        new.append(total)
+    return new
+
+arr = [10, 20, 30, 20, 20, 30, 40, 50, -20, 60, 60, -20, -20]
+print("Original list: ", arr)
+res = sum_cum(arr)
+print("Final cumulative sum list is: ", res)

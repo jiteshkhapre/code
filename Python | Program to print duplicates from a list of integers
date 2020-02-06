@@ -1,0 +1,16 @@
+arr = [10, 20, 30, 20, 20, 30, 40, 50, -20, 60, 60, -20, -20]
+print("Original list: ", arr)
+def duplicates(arr):
+    dic = {}
+    for i in arr:
+        if i in dic:
+            dic[i] = dic[i] + 1
+        else:
+            dic[i] = 0
+    new = []
+    for i in dic:
+        if dic[i] > 0:
+            new.append(i)
+    return new
+res = duplicates(arr)
+print("Final duplicates' list: ", res)

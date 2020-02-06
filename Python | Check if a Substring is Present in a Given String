@@ -1,0 +1,19 @@
+def find_sub(s,n):
+    if s.find(n) == -1:
+        return print("Not Found")
+    else:
+        return print("Found")
+s = "GeeksForGeeks"
+print("Original string is:",s)
+n = "eeksFor"
+find_sub(s,n)
+---------------- OR ------------
+def find_sub(s,n):
+    if n in s:
+        return print("Found")
+    else:
+        return print("Not Found")
+s = "GeeksForGeeks"
+print("Original string is:",s)
+n = "eeksFor"
+find_sub(s,n)

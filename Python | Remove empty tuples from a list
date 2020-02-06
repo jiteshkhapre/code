@@ -1,0 +1,15 @@
+def remove_tuples(tuples):
+    tuples = [t for t in tuples if t]
+    return tuples
+tuples = [(), ('ram','15','8'), (), ('laxman', 'sita'), ('krishna', 'akbar', '45'), ('',''),()]
+print("Original tuple is: ", tuples)
+res = remove_tuples(tuples)
+print("Tuples after removing empty tuples: ", res)
+-------------------------------------------- OR ------------------------------------------
+def remove_tuples(tuples):
+    tuples = list(filter(None, tuples))
+    return tuples
+tuples = [(), ('ram','15','8'), (), ('laxman', 'sita'), ('krishna', 'akbar', '45'), ('',''),()]
+print("Original tuple is: ", tuples)
+res = remove_tuples(tuples)
+print("Tuples after removing empty tuples: ", res)

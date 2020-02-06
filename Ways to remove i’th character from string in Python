@@ -1,0 +1,48 @@
+def rem_i(s,pos):
+    new = ''
+    for i in range(len(s)):
+        if i != pos-1:
+            new = new + s[i]
+    return new
+s = "GeeksForGeeks"
+print("Original string is:",s)
+n = 4
+res = rem_i(s,n)
+print("Final string after removing {0} element is {1}".format(n,res))
+------------------------------ OR ------------------------------------
+def rem_i(s,pos):
+    new = s.replace(s[pos-1],'')
+    return new
+s = "GeeksForGeeks"
+print("Original string is:",s)
+n = 4
+res = rem_i(s,n)
+print("Final string after removing {0} element is {1}".format(n,res))
+--------------------------------- OR ---------------------------------
+def rem_i(s,ch):
+    new = s.replace(ch,'',1)
+    print(new)
+    return new
+s = "GeeksForGeeks"
+print("Original string is:",s)
+ch = 's'
+res = rem_i(s,ch)
+print("Final string after removing {0} element is {1}".format(n,res))
+------------------------------------ OR ---------------------------------
+def rem_i(s,pos):
+    new = ''.join([s[i] for i in range(len(s)) if i!= pos-1])
+    return new
+s = "GeeksForGeeks"
+print("Original string is:",s)
+n = 4
+res = rem_i(s,n)
+print("Final string after removing {0} element is {1}".format(n,res))
+--------------------------------------- OR ------------------------------------
+def rem_i(s,pos):
+    new = s[:pos-1]+s[pos:]
+    return new
+s = "GeeksForGeeks"
+print("Original string is:",s)
+n = 4
+res = rem_i(s,n)
+print("Final string after removing {0} element is {1}".format(n,res))

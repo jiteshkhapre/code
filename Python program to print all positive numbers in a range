@@ -1,0 +1,7 @@
+start = int(input("Enter start limit: "))
+end = int(input("Enter end limit: "))
+lst = []
+for i in range(start, end+1):
+    if i >= 0:
+        lst.append(i)
+print("Positive nos between {0} and {1} is {2}".format(start, end, lst))

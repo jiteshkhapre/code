@@ -1,0 +1,46 @@
+def del_ele(arr, list_del):
+    counter = 0
+    i = 0
+    n = len(arr)
+    while(i<n):
+        if list_del[counter] == arr[i]:
+            arr.remove(arr[i])
+            i = i-1
+            n = len(arr)
+            counter += 1
+            if counter == len(list_del):
+                break
+            continue
+        i = i+1
+    return arr
+arr = [21, -15, 6, 25, -25, 0, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+ele_del = arr[1:5]
+print("List to be deleted: ", ele_del)
+res = del_ele(arr, ele_del)
+print("Original array after deletion is: ", arr)
+------------------------------------- OR ---------------------------------
+arr = [21, -15, 6, 25, -25, 0, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+ele_del = arr[1:5]
+print("List to be deleted: ", ele_del)
+del arr[1:5]
+print("Original array after deletion is: ", arr)
+-------------------------------------- OR -------------------------------
+arr = [21, -15, 6, 25, -25, 0, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+ele_del = {-15,+28, -10}
+print("List to be deleted: ", ele_del)
+arr = [i for i in arr if i not in ele_del]
+print("Original array after deletion is: ", arr)
+------------------------------------- OR -------------------------------
+arr = [21, -15, 6, 25, -25, 0, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+index_del = [2, 5, 8]
+print("List of indices to be deleted: ", index_del)
+print("Elements corresponding to the respective indices: ")
+[print(arr[i], end=" ") for i in index_del]
+print()
+for i in sorted(index_del, reverse = True):
+    del arr[i]
+print("Original array after deletion is: ", arr)

@@ -1,0 +1,24 @@
+def length(s):
+    count = 0
+    for i in s:
+        count += 1
+    return count
+s = "Geeks For Geeks"
+print("Original string is:",s)
+n = length(s)
+print("Length of array is:", n)
+---------------- OR -------------
+s = "Geeks For Geeks"
+print("Original string is:",s)
+n = len(s)
+print("Length of array is:", n)
+----------------- OR --------------
+def length(s):
+    count = 0
+    while(s[count:]):
+        count += 1
+    return count
+s = "Geeks For Geeks"
+print("Original string is:",s)
+n = length(s)
+print("Length of array is:", n)

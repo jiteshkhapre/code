@@ -1,0 +1,35 @@
+arr = [21, -15, 6, 25, -25, 0, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+pos_count = 0
+neg_count = 0
+for i in arr:
+    if i>=0:
+        pos_count += 1
+    else:
+        neg_count += 1
+print("In a list of {0} elements, there are total {1} positive number and total {2} negative elements".format(len(arr),pos_count,neg_count))
+------------------------------------------------------------ OR -----------------------------------------------------------
+arr = [21, -15, 6, 25, -25, 0, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+pos_count = 0
+neg_count = 0
+i = 0
+while(i<len(arr)):
+    if arr[i]>=0:
+        pos_count += 1
+    else:
+        neg_count += 1
+    i += 1
+print("In a list of {0} elements, there are total {1} positive number and total {2} negative elements".format(len(arr),pos_count,neg_count))
+------------------------------------------------------------- OR -------------------------------------------------------------
+arr = [21, -15, 6, 25, -25, 0, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+pos_count = len([i for i in arr if i >= 0])
+neg_count = len(arr)-pos_count
+print("In a list of {0} elements, there are total {1} positive number and total {2} negative elements".format(len(arr),pos_count,neg_count))
+-------------------------------------------------------------- OR -------------------------------------------------------------
+arr = [21, -15, 6, 25, -25, 0, 7, -10, +12, 20, +10, -10, -28, 28,-10]
+print("Initial array: ", arr)
+pos_count = len(list(filter(lambda x:x>=0,arr)))
+neg_count = len(list(filter(lambda x:x<0, arr)))
+print("In a list of {0} elements, there are total {1} positive number and total {2} negative elements".format(len(arr),pos_count,neg_count))

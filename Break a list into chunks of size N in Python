@@ -1,0 +1,7 @@
+arr = ['geeks', 'for', 'geeks', 'like', 'geeky','nerdy', 'geek', 'love', 'questions','words', 'life']
+print("Original array: ", arr)
+n = 4
+def mix(arr,n):
+    for i in range(0, len(arr), n):
+        yield arr[i:i + n]
+print("Final arrays: ", list(mix(arr,n)))

@@ -1,0 +1,18 @@
+def remove(s,i):
+    s_new=''
+    for n in range(len(s)):
+        if n!= i:
+            s_new = s_new + s[n]
+    return s_new
+s='okay'
+print(s)
+n = remove(s,1)
+print(n)
+----------------- OR ------------------
+def remove(s,i):
+    s=s[:i]+s[i+1:]
+    return s
+s='okayyes'
+print(s)
+n = remove(s,2)
+print(n)

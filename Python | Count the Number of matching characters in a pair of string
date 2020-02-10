@@ -1,0 +1,28 @@
+def count_same(s1,s2):
+    s1_set = set(s1)
+    s2_set = set()
+    for i in s2:
+        if i in s1_set:
+            s2_set.add(i)
+        else:
+            pass
+    return len(s2_set)
+s1 = "aabcddekll12@"
+print("Original string 1 is:",s1)
+s2 = "bb22ll@55k"
+print("Original string 2 is:",s2)
+n = count_same(s1,s2)
+print("Number of same matching characters are: ", n)
+------------------------ OR ------------------------
+def count_same(s1,s2):
+    s1_set = set(s1)
+    s2_set = set(s2)
+    for i in s2:
+        matched_characters = s1_set & s2_set
+    return len(matched_characters)
+s1 = "aabcddekll12@"
+print("Original string 1 is:",s1)
+s2 = "bb22ll@55k"
+print("Original string 2 is:",s2)
+n = count_same(s1,s2)
+print("Number of same matching characters are: ", n)

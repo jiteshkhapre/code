@@ -1,0 +1,8 @@
+def split_and_join(s):
+    s= s.split(" ")
+    s_new = "-".join(s)
+    return s_new
+s = "Geeks for Geeks"
+print("Original string: ", s)
+f = split_and_join(s)
+print("Final string: ",f)

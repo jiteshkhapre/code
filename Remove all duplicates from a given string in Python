@@ -1,0 +1,26 @@
+def remove_dup(s):                            #UNORDERED
+    s1 = set(s)
+    return "".join(s1)
+s = "aabcddeklAEIURl12@"
+print("Original string is:",s)
+n = remove_dup(s)
+print("String after removing duplicates: ", n)
+---------------------- OR ---------------------
+from collections import OrderedDict           #ORDERED
+def remove_dup(s):
+    return "".join(OrderedDict.fromkeys(s))
+s = "aabcddeklAEIURl12@"
+print("Original string is:",s)
+n = remove_dup(s)
+print("String after removing duplicates: ", n)
+----------------------- OR ----------------------
+def remove_dup(s):                            #ORDERED
+    s1=''
+    for i in s:
+        if i not in s1:
+            s1 = s1+i
+    return s1
+s = "aabcddeklAEIURl12@"
+print("Original string is:",s)
+n = remove_dup(s)
+print("String after removing duplicates: ", n)

@@ -1,0 +1,12 @@
+def greater_len(s,k):
+    word = s.split(" ")
+    lst = []
+    for i in word:
+        if len(i) > k:
+            lst.append(i)
+    return lst
+s = "hello geeks for geeks is computer science portal"
+print("Original string is:",s)
+k = 4
+n = greater_len(s,k)
+print("words greater than {0} are: {1}".format(k, n))

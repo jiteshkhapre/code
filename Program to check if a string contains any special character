@@ -1,0 +1,11 @@
+import re
+def special(s):
+    regex = re.compile('[@_!#$%^&*()<>?/\|}{~:]')
+    if (regex.search(s)==None):
+        print('Special character does not exist.')
+    else:
+        print("Special character exist")
+        
+s = "aabcddeklAEIURl12@"
+print("Original string is:",s)
+n = special(s)

@@ -1,0 +1,38 @@
+def check(string):
+    s = string.lower()
+    for i in s:
+        if i == 'a':
+            continue
+        if i == 'e':
+            continue
+        if i == 'i':
+            continue
+        if i == 'o':
+            continue
+        if i == 'u':
+            continue
+        else:
+            return print("It doesn't have all vowels.")
+    return print("It contains all vowels.")
+s = "aeioUaoui"
+print("Original string is:",s)
+check(s)
+-------------------------- OR ------------------------------
+def check(string):
+    vowels = set('aeiou')
+    s = set()
+    for i in string:
+        if i not in s:
+            s.add(i)
+        else:
+            pass
+        
+    if len(s) == len(vowels):
+        print("It contains all vowels.")
+    else:
+        print("It doesn't have all vowels.")
+        
+s = "aeioUaoui"
+print("Original string is:",s)
+n = s.lower()
+check(n)

@@ -1,0 +1,15 @@
+def vowel_count(s):
+    s2 = set('aeiouAEIOU')
+    count = 0
+    for i in s:
+        if i in s2:
+            count = count + 1
+    return count
+s1 = "aabcddeklAEIURl12@"
+print("Original string 1 is:",s1)
+s2 = "bb22ll@55k"
+print("Original string 2 is:",s2)
+n1 = vowel_count(s1)
+n2 = vowel_count(s2)
+print("Number of VOWELS are: ", n1)
+print("Number of VOWELS are: ", n2)

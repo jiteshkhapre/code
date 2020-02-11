@@ -1,0 +1,26 @@
+def uncommon(str1, str2):
+    str1 = set(str1.split(" "))
+    str2 = set(str2.split(" "))
+    string_union = str1.union(str2)
+    string_intersection = str1.intersection(str2)
+    string = string_union - string_intersection
+    return string
+str1 = "apple mango banana mango"
+print("First string is: ", str1)
+str2 = "mango cherry apple"
+print("Second string is: ", str2)
+res = uncommon(str1,str2)
+print("Uncommon: ",res)
+---------------------- OR ----------------------
+def UncommonWords(A, B): 
+    count = {} 
+    for word in A.split(): 
+        count[word] = count.get(word, 0) + 1
+    for word in B.split(): 
+        count[word] = count.get(word, 0) + 1
+    return [word for word in count if count[word] == 1] 
+  
+A = "apple mango banana mango"
+B = "mango cherry apple"
+  
+print(UncommonWords(A, B)) 

@@ -1,0 +1,13 @@
+from itertools import permutations
+def permutation(s):
+    perm_list = permutations(s)
+    for i in perm_list:
+        for j in i:
+            print(j, end='')
+        print()
+    return perm_list
+
+s = 'ABC'
+print("Original string: ", s)
+print("Permutated strings: ")
+permutation(s)

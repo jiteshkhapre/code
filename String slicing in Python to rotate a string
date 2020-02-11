@@ -1,0 +1,12 @@
+def rot(s, k):
+    left_front = s[k:]
+    left_back = s[:k]
+    right_front = s[len(s)-k:]
+    right_back = s[:len(s)-k]
+    print("Left rotation is: ", left_front+left_back)
+    print("Right rotation is: ", right_front+right_back)
+
+s = 'GeeksforGeeks'
+print("Original string: ", s)
+k = 2
+n = rot(s,k)

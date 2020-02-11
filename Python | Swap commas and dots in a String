@@ -1,0 +1,18 @@
+def swap(s):
+    s = s.replace('.','swap_extra')
+    s = s.replace(',','.')
+    s = s.replace('swap_extra',',')
+    return s
+s = "14, 625, 498.002"
+print("Original string: ", s)
+n = swap(s)
+print("String after raplacing: ", n)
+------------------ OR ---------------
+def swap(s):
+    mt = s.maketrans(', .','. ,')
+    final = s.translate(mt)
+    return final
+s = "14, 625, 498.002"
+print("Original string: ", s)
+n = swap(s)
+print("String after raplacing: ", n)

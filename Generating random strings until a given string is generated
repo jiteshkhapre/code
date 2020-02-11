@@ -1,0 +1,21 @@
+import string
+import random
+characters = string.ascii_lowercase + string.ascii_uppercase + string.digits + ' ., !?;:'
+check = "123"
+attemptedthis = ''.join(random.choice(characters)
+                    for i in range(len(check)))
+iteration = 0
+complete = False
+while(complete == False):
+    print(attemptedthis)
+    attemptnext = ''
+    complete = True
+    for i in range(len(check)):
+        if attemptedthis[i] != check[i]:
+            complete = False
+            attemptnext += random.choice(characters)    
+        else:
+            attemptnext += check[i]
+    iteration += 1
+    attemptedthis = attemptnext
+print("Iterations: ", iteration)

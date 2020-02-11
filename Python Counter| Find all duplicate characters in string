@@ -1,0 +1,10 @@
+def dup(s):
+    n = ''
+    for i in s:
+        if i in n:
+            print(i, end=' ')
+        else:
+            n=n+i
+s = 'hellooandjanksggk'
+print("Original string: ", s)
+dup(s)

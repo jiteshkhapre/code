@@ -1,0 +1,18 @@
+dic = {'a': 100, 'b':200, 'c':300}
+s=0
+for i in dic:
+    s = s + dic[i]
+print(dic)
+print("Sum: ", s)
+------------- OR ----------------
+dic = {'a': 100, 'b':200, 'c':300}
+s=sum(i for i in dic.values())
+print(dic)
+print("Sum: ", s)
+--------------- OR -----------------
+dic = {'a': 100, 'b':200, 'c':300}
+s=0
+for i in dic.values():
+    s = s + i
+print(dic)
+print("Sum: ", s)

@@ -1,0 +1,16 @@
+def merge(dic1, dic2):
+    dic1.update(dic2)
+    return dic1
+
+dic1 = {'a': 10, 'b': 8} 
+dic2 = {'d': 6, 'c': 4} 
+n=merge(dic1,dic2)
+print(n)
+--------------- OR ------------
+def merge(dic1, dic2):
+    mer = {**dic1, **dic2}
+    return mer
+dic1 = {'a': 10, 'b': 8} 
+dic2 = {'d': 6, 'c': 4} 
+n = merge(dic1, dic2)
+print(n)

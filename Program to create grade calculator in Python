@@ -1,0 +1,61 @@
+jack = { "name":"Jack Frost", 
+         "assignment" : [80, 50, 40, 20], 
+         "test" : [75, 75], 
+         "lab" : [78.20, 77.20] 
+       } 
+james = { "name":"James Potter", 
+          "assignment" : [82, 56, 44, 30], 
+          "test" : [80, 80], 
+          "lab" : [67.90, 78.72] 
+        } 
+dylan = { "name" : "Dylan Rhodes", 
+          "assignment" : [77, 82, 23, 39], 
+          "test" : [78, 77], 
+          "lab" : [80, 80] 
+        } 
+jess = { "name" : "Jessica Stone", 
+         "assignment" : [67, 55, 77, 21], 
+         "test" : [40, 50], 
+         "lab" : [69, 44.56] 
+       }
+tom = { "name" : "Tom Hanks", 
+        "assignment" : [29, 89, 60, 56], 
+        "test" : [65, 56], 
+        "lab" : [50, 40.6] 
+      }
+
+def average_marks(lst):
+    total = float(sum(lst))
+    avg = total/len(lst)
+    return avg
+
+def total_average(dic):
+    total = 0.1*float(sum(dic['assignment'])/len(dic['assignment'])) + 0.7*float(sum(dic['test'])/len(dic['test'])) + 0.2*float(sum(dic['lab'])/len(dic['lab']))
+    return total
+    
+def letter_grade(n):
+    if n >= 90:
+        return 'A'
+    elif n >= 80:
+        return 'B'
+    elif n >= 70:
+        return 'C'
+    elif n >= 60:
+        return 'D'
+    else:
+        return 'E'
+    
+student = [jack, james, dylan, jess, tom]
+lst = []
+for i in student:
+    print("Student name is: ", i["name"])
+    print("Average marks of assignment of {0} is: {1}".format(i['name'],average_marks(i['assignment'])))
+    print("Average marks of test of {0} is: {1}".format(i['name'],average_marks(i['test'])))
+    print("Average marks of lab of {0} is: {1}".format(i['name'],average_marks(i['lab'])))
+    print("Total average of all the marks is:", total_average(i))
+    print("Letter grade of {0} is: {1}".format(i['name'], letter_grade(total_average(i))))
+    print()
+    lst.append(total_average(i))
+
+print("Class average marks are: ", average_marks(lst))
+print("Class grade is: ", letter_grade(average_marks(lst)))

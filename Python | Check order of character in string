@@ -1,0 +1,32 @@
+def check(s,p):
+    s=''.join(reversed(s))
+    new = ''
+    for i in s:
+        if i in new:
+            pass
+        else:
+            new = new+i
+    
+    new=''.join(reversed(new))
+    marker = 0
+    check = 0
+    for i in range(0,len(new)):
+        if p[marker] == new[i]:
+            check = i
+            marker = marker + 1
+            if marker == len(p):
+                return True
+    return False
+
+    
+s = 'engineers rock'
+print("Original string is: ",s)
+p = 'er'
+print("Pattern is: ", p)
+print(check(s,p))
+
+s = 'engineers rock'
+print("Original string is: ",s)
+p = 'egr'
+print("Pattern is: ", p)
+print(check(s,p))

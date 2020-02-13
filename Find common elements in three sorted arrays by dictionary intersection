@@ -1,0 +1,29 @@
+def common(str1,str2,str3):
+    lst = []
+    for i in str1:
+        if i in str2:
+            if i in str3:
+                lst.append(i)
+    return lst
+str1 = [1, 5, 10, 20, 40, 80,120] 
+str2 = [6, 7, 20, 80, 100,120] 
+str3 = [3, 4, 15, 20, 30, 70, 80, 120] 
+print(common(str1,str2,str3))
+--------------- OR --------------------
+from collections import Counter
+def common(str1,str2,str3):
+    str1 = Counter(str1)
+    str2 = Counter(str2)
+    str3 = Counter(str3)
+    resdic = dict(str1 & str2 & str3)
+    print(resdic)
+    count = []
+    for (key,val) in resdic.items():
+        for i in range(0,val):
+            count.append(key)
+    print(count)
+
+str1 = [1, 5, 10, 20, 40, 80,120] 
+str2 = [6, 7, 20, 80, 100,120] 
+str3 = [3, 4, 15, 20, 30, 70, 80, 120] 
+common(str1,str2,str3)

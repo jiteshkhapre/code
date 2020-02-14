@@ -1,0 +1,13 @@
+s = ['cat', 'dog', 'tac', 'god', 'act']
+dic  = {}
+for i in s:
+    key = ''.join(sorted(i))
+    if key in dic.keys():
+        dic[key].append(i)
+    else:
+        dic[key]=[]
+        dic[key].append(i)
+out=''
+for key, val in dic.items():
+    out = out + ' '.join(val) +' '
+print(out)

@@ -1,0 +1,37 @@
+s = ['john','johnny','jackie','johnny','john','jackie','jamie','jamie', 
+'john','johnny','jamie','johnny','john']
+dic = {}
+for i in s:
+    if i in dic:
+        dic[i] = dic[i]+1
+    else:
+        dic[i] = 1
+print(dic)
+max_val = 0
+max_key = 0
+for (key,value) in dic.items():
+    if value > max_val:
+        max_key = key
+        max_val = value
+lst = []
+for key, val in dic.items():
+    if val == max_val:
+        lst.append(key)   
+print(lst)
+------------------------------------ OR -------------------------------
+from collections import Counter
+s = ['john','johnny','jackie','johnny','john','jackie','jamie','jamie', 
+'john','johnny','jamie','johnny','john']
+s = Counter(s)
+print(dic)
+max_val = 0
+max_key = 0
+for (key,value) in dic.items():
+    if value > max_val:
+        max_key = key
+        max_val = value
+lst = []
+for key, val in dic.items():
+    if val == max_val:
+        lst.append(key)   
+print(lst)

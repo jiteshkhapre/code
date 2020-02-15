@@ -1,0 +1,31 @@
+def counting(string):
+    dic = {}
+    for s in string:
+        dic[s] = string.count(s)
+    print(dic)
+    
+s = [1, 1, 1, 5, 5, 3, 1, 3, 3, 1, 4, 4, 4, 2, 2, 2, 2]
+print(s)
+counting(s)
+----------------------- OR -----------------------
+def counting(string):
+    dic = {}
+    for s in string:
+        if s in dic:
+            dic[s] = dic[s]+1
+        else:
+            dic[s] = 1
+    print(dic)
+    
+s = [1, 1, 1, 5, 5, 3, 1, 3, 3, 1, 4, 4, 4, 2, 2, 2, 2]
+print(s)
+counting(s)
+------------------------ OR ---------------------------
+from collections import Counter
+def counting(s):
+    new = Counter(s)
+    print(new)
+    
+s = [1, 1, 1, 5, 5, 3, 1, 3, 3, 1, 4, 4, 4, 2, 2, 2, 2]
+print(s)
+counting(s)

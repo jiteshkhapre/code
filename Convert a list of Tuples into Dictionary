@@ -1,0 +1,13 @@
+def convert(s):
+    dic = dict(s)
+    print(dic)
+s = [("akash", 10), ("gaurav", 12), ("anand", 14), ("suraj", 20), ("akhil", 25), ("ashish", 30)]
+convert(s)
+--------------- OR ---------------
+def convert(s):
+    dic = {}
+    for key , val in s:
+        dic.setdefault(key,[]).append(val)
+    print(dic)
+s = [("akash", 10), ("gaurav", 12), ("anand", 14), ("suraj", 20), ("akhil", 25), ("ashish", 30)]
+convert(s)

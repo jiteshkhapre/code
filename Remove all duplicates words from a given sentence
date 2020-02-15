@@ -1,0 +1,17 @@
+from collections import Counter
+def rem_dup(s):
+    s = s.split(' ')
+    dic = Counter(s)
+    print(' '.join(dic.keys()))
+s='Python is great and Java is also great'
+print("Given string is: ",s)
+rem_dup(s)
+---------------- OR -----------------
+from collections import Counter
+def rem_dup(s):
+    s = s.split(' ')
+    set_s = set(s)
+    print(' '.join(set_s))
+s='Python is great and Java is also great'
+print("Given string is: ",s)
+rem_dup(s)

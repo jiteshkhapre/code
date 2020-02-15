@@ -1,0 +1,23 @@
+from collections import Counter
+def binary(num1, num2):
+    num1 = bin(num1)[2:]
+    num2 = bin(num2)[2:]
+    
+    zeros = abs(len(num1)-len(num2))
+    if len(num1)>len(num2):
+        num2 = zeros*'0'+num2
+    else:
+        num1 = zeros*'0'+num1
+    
+    dic1 = Counter(num1)
+    dic2 = Counter(num2)
+    
+    if dic1 == dic2:
+        print("Yes. They are Anagram.")
+    else:
+        print("No. They are not Anagram.")
+        
+num1 = 8
+num2 = 2
+print("Num 1 and Num 2 are: ", num1,num2)
+binary(num1,num2)

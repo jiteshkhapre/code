@@ -1,0 +1,10 @@
+from collections import Counter
+def anagram_subset(s):
+    s=s.split(" ")
+    for i in range(len(s)):
+        s[i] = ''.join(sorted(s[i]))
+    dic = Counter(s)
+    print(max(dic.values()))
+s='ant magenta magnate tan gnamate'
+print("Given string is: ",s)
+anagram_subset(s)

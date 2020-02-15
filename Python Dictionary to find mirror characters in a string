@@ -1,0 +1,35 @@
+def mirror(s, n):
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    beta = 'zyxwvutsrqponmlkjihgfedcba'
+    dic =dict(zip(alpha,beta))
+
+    prev = s[:n-1]
+    later = s[n-1:]
+    mir = ''
+    for i in later:
+        mir = mir + dic[i]
+        
+    final = prev + mir
+    print(final)
+            
+s = 'paradox'
+print(s)
+n = 3
+mirror(s,n)
+------------------- OR ------------------
+def mirror(s, n):
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    prev = s[:n-1]
+    later = s[n-1:]
+    mir = ''
+    for i in later:
+        for j in range(len(alpha)):
+            if i == alpha[j]:
+                mir = mir + alpha[-j-1]
+    final = prev+mir
+    print(final)
+            
+s = 'paradox'
+print(s)
+n = 3
+mirror(s,n)

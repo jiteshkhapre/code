@@ -1,0 +1,55 @@
+from collections import Counter
+def ifmade(s1,s2):
+    s1 = ''.join(Counter(s1).keys())
+    s2 = ''.join(Counter(s2).keys())
+    counter = 0
+    for i in s1:
+        if i in s2:
+            counter += 1
+    if counter == len(s1):
+        print("Possible")
+    else:
+        print("Not Possible")
+    print()
+    
+s1 = 'ABHISHEKsinGH'
+s2 = 'gfhfBHkooIHnfndSHEKsiAnG'
+print(s1,s2)
+ifmade(s1,s2)
+
+s1 = 'Hello'
+s2 = 'dnaKfhelddf'
+print(s1,s2)
+ifmade(s1,s2)
+
+s1 = 'GeeksforGeeks'
+s2 = 'rteksfoGrdsskGeggehes'
+print(s1,s2)
+ifmade(s1,s2)
+------------ OR ---------------
+from collections import Counter
+def ifmade(s1,s2):
+    s1 = Counter(s1)
+    s2 = Counter(s2)
+    res = s1 & s2
+    if res == s1:
+        print("Possible")
+    else:
+        print("Not Possible")
+    print()
+    
+    
+s1 = 'ABHISHEKsinGH'
+s2 = 'gfhfBHkooIHnfndSHEKsiAnG'
+print(s1,s2)
+ifmade(s1,s2)
+
+s1 = 'Hello'
+s2 = 'dnaKfhelddf'
+print(s1,s2)
+ifmade(s1,s2)
+
+s1 = 'GeeksforGeeks'
+s2 = 'rteksfoGrdsskGeggehes'
+print(s1,s2)
+ifmade(s1,s2)

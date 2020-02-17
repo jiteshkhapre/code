@@ -1,0 +1,15 @@
+def finding(dic, arr):
+    lst = []
+    for i in dic:
+        count = 0
+        for index in range(len(i)):
+            if i[index] in arr:
+                count = count + 1
+                if count == len(i):
+                    lst.append(i)
+    return lst
+    
+dic = ["go","bat","me","eat","goal","boy", "run"]
+arr = ['e','o','b', 'a','m','g', 'l']
+n = finding(dic,arr)
+print(n)

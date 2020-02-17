@@ -1,0 +1,30 @@
+import requests
+def getword():
+    url = "https://en.wikipedia.org/wiki/Brooklyn_Nine-Nine"
+    collection = requests.get(url)
+    wordlist = collection.content
+    wordlist = wordlist.decode("utf-8").split()
+    return wordlist
+
+def isordered():
+    collection = getword()
+    collection = collection[:]
+    for word in collection:
+        print(word)
+        l = len(word) - 1
+        i = 0
+        res = "Word is ordered"
+        if len(word) < 3:
+            pass
+        while i < l:
+            if ord(word[i]) > ord(word[i+1]):
+                res = "Word is not ordered"
+                break
+            else:
+                i = i+1
+        if res == "Word is not ordered":
+            print("Word is not ordered")
+        else:
+            print("Word is ordered")
+    
+isordered()
